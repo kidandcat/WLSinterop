@@ -1,5 +1,5 @@
 # Excluded commands to overwrite in PowerShell
-$exclude = @("dir", "cd", "git", "node", "npm")
+$exclude = @("dir", "cd", "git", "node", "npm", "code")
 
 Set-PSReadlineKeyHandler -Key Tab -Function Complete
 function bashFunc($cmd, $arg) {C:\windows\system32\bash.exe -c "sudo $cmd $arg"}
@@ -9,6 +9,10 @@ $cmds = bash -c "compgen -ac"
 $ErrorActionPreference = "SilentlyContinue"
 foreach ($c in $cmds) {
     if ($c -match $pat) {
+        if ($exclude.Contains("$c")){
+            continue
+        }
+        Remove-Item Alias:$c
         Set-Item -Path function:global:$c -Value {
             $arguments = $args
             $posixArgs = @()
@@ -18,9 +22,6 @@ foreach ($c in $cmds) {
                 $posixArgs += $arg
             }
             Invoke-Expression "bashFunc(`"$($MyInvocation.MyCommand.Name)`", `"$posixArgs`")"
-        }
-        if (!$exclude.Contains("$c")){
-            Remove-Item Alias:$c
         }
     }
 }
