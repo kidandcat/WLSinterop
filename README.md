@@ -13,6 +13,8 @@ After opening a new PowerShell window, all of your Linux commands will be availa
 
 Right now command autocomplete doesn't works, but windows paths will be parsed so you can autocomplete paths.
 
+In administrator privileged command ```set-executionpolicy remotesigned```
+
 ### Recommended
 
 ```LxRun.exe /setdefaultuser root```
