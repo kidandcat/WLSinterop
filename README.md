@@ -15,7 +15,7 @@ Right now command autocomplete doesn't works, but windows paths will be parsed s
 
 In administrator privileged command ```set-executionpolicy remotesigned```
 
-### Recommended
+#### (optional) Set `root` as default user
 
 ```ubuntu1804.exe config --default-user root```
 
