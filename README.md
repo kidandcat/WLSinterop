@@ -19,5 +19,7 @@ In administrator privileged command ```set-executionpolicy remotesigned```
 
 ```ubuntu1804.exe config --default-user root```
 
+### Demo
+Using `dir`, then `ls`
 
 ![Demo](https://raw.githubusercontent.com/kidandcat/WLSinterop/master/Captura.PNG)
