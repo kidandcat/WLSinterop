@@ -17,4 +17,4 @@ In administrator privileged command ```set-executionpolicy remotesigned```
 
 ### Recommended
 
-```LxRun.exe /setdefaultuser root```
+```ubuntu1804.exe config --default-user root```
