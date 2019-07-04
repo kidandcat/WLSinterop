@@ -18,3 +18,6 @@ In administrator privileged command ```set-executionpolicy remotesigned```
 ### Recommended
 
 ```ubuntu1804.exe config --default-user root```
+
+
+![Demo](https://raw.githubusercontent.com/kidandcat/WLSinterop/master/Captura.PNG)
