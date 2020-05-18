@@ -1,7 +1,7 @@
 
 # WLSinterop
 
-PowerShell profile for minimize environment switch
+PowerShell profile for minimizing environment switch
 
 ### Installation
 
